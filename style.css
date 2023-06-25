@@ -1,0 +1,190 @@
+/* fonts roboto */
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Light.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global */
+
+body {
+  min-height: 100vh;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+:root {
+  --nav-color: #33292a;
+}
+
+/* style navbar */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 70%;
+  z-index: 2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  padding: 1rem 1.5rem;
+  background-color: var(--nav-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: white;
+}
+
+.nav-link:hover {
+  color: #482ff7;
+}
+
+/* footer */
+
+.aplication-footer {
+  margin-top: auto;
+  background-color: var(--nav-color);
+  text-align: center;
+  height: 100px;
+  color: white;
+  width: 100%;
+  padding: 50px 0 0 0;
+  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
+}
+
+.aplication-footer > p {
+  font-size: 1.2rem;
+}
+
+/* first page container */
+
+.image-container-home {
+  background-image: url(images/home.jpg);
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+/* breakpoints */
+
+@media (min-width: 475px) {
+}
+
+@media (min-width: 640px) {
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: white;
+    width: 70%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+  }
+
+  .nav-menu.active {
+    left: 15%;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .nav-link {
+    color: black;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
