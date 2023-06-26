@@ -23,6 +23,7 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+  background-color: black;
 }
 
 li {
@@ -42,6 +43,7 @@ body {
   flex-direction: column;
   width: 70%;
   margin: auto;
+  background-color: white;
 }
 
 :root {
@@ -82,19 +84,21 @@ body {
 
 .nav-menu {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 4rem;
+  width: 900px;
+  justify-content: space-between;
 }
 
 .nav-link {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
   color: white;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-link:hover {
-  color: #482ff7;
+  border-bottom: 1px solid white;
 }
 
 /* footer */
@@ -114,7 +118,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* first page container */
+/* article 1 */
 
 .image-container-home {
   background-image: url(images/home.jpg);
@@ -132,8 +136,115 @@ body {
 }
 
 h1 {
+  margin-bottom: -5rem;
+  margin-right: 4rem;
+  flex-basis: 250px;
+}
+
+/* article 2 */
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.wrapper-aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.text-container-aboutus {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.text-aboutus {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.text-aboutus h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* article 3 */
+
+.what-we-do {
+  background-color: var(--nav-color);
+  color: white;
+}
+
+.wrapper-whatwedo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+}
+
+.text-whatwedo {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  max-width: 900px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.text-whatwedo h2 {
+  font-size: 2.5rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-whatwedo {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.image-whatwedo p {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.wrapper-whatwedo img {
+  width: 75px;
+  height: auto;
+  display: flex;
   margin-bottom: 2rem;
-  margin-right: 2rem;
 }
 
 /* breakpoints */
@@ -141,17 +252,24 @@ h1 {
 @media (min-width: 475px) {
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
+  body {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 4rem;
     flex-direction: column;
-    background-color: white;
-    width: 70%;
+    background-color: var(--nav-color);
+    width: 60%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
@@ -160,15 +278,22 @@ h1 {
   }
 
   .nav-menu.active {
-    left: 15%;
+    left: 20%;
   }
 
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 1.2rem 0;
   }
 
   .nav-link {
-    color: black;
+    color: var(--nav-color);
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+  }
+
+  .nav-link:hover {
+    border-bottom: none;
   }
 
   .hamburger {
@@ -186,5 +311,43 @@ h1 {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .about-us {
+    margin: 6rem;
+    min-height: fit-content;
+  }
+
+  .wrapper-aboutus {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .text-aboutus,
+  .image-container {
+    flex: 0 0 100%;
+  }
+
+  .text-aboutus h2,
+  .text-aboutus p {
+    margin-bottom: 2rem;
+  }
+
+  .text-whatwedo {
+    margin-bottom: 0;
+  }
+
+  .text-container-aboutus {
+    padding: 0;
+  }
+
+  .image-whatwedo {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .wrapper-whatwedo img {
+    margin-bottom: 1rem;
   }
 }
