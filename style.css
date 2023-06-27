@@ -48,6 +48,8 @@ body {
 
 :root {
   --nav-color: #33292a;
+  --gray: #f2f2f2;
+  --lightbrown: #644b4f;
 }
 
 /* style navbar */
@@ -247,18 +249,147 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* breakpoints */
+/* article 4 */
 
-@media (min-width: 475px) {
+.our-trips {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  margin: 3rem 0;
 }
 
-@media (max-width: 640px) {
-  body {
-    width: 100%;
+.our-trips-grid {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 300px));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.our-trips-grid div {
+  background-color: var(--gray);
+  width: 300px;
+  height: 300px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-trips-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+/* article 5 */
+
+.where-to-go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightbrown);
+  color: white;
+  width: 100%;
+  height: 450px;
+}
+
+.wrapper-wheretogo {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-wheretogo .text-wheretogo {
+  align-items: center;
+}
+
+.wrappwe-wheretogo .h2-wheretogo {
+  align-items: flex-start;
+}
+
+.text-wheretogo p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  text-align: justify;
+}
+
+.text-wheretogo {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.text-wheretogo button {
+  border: 2px solid white;
+  background-color: white;
+  font-weight: bold;
+  padding: 8px;
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h2-wheretogo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  width: 20%;
+}
+
+/* breakpoints */
+
+@media (max-width: 1400px) {
+  .our-trips-grid {
+    grid-template-columns: repeat(2, minmax(300px, 300px));
   }
 
-  .header {
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
     width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    padding: 0px;
   }
 }
 
@@ -349,5 +480,67 @@ h1 {
 
   .wrapper-whatwedo img {
     margin-bottom: 1rem;
+  }
+
+  .our-trips-grid {
+    grid-template-columns: repeat(1, minmax(300px, 300px));
+  }
+
+  .our-trips-grid div {
+    background-color: var(--gray);
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    padding: 0px;
+  }
+
+  @media (max-width: 640px) {
+    body {
+      width: 100%;
+    }
+
+    .header {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 475px) {
   }
 }
