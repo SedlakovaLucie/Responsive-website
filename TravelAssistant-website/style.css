@@ -1,0 +1,625 @@
+/* fonts roboto */
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Light.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global */
+
+body {
+  min-height: 100vh;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  background-color: white;
+}
+
+:root {
+  --nav-color: #33292a;
+  --gray: #f2f2f2;
+  --lightbrown: #644b4f;
+  --footer: #efa69d;
+}
+
+/* style navbar */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 70%;
+  z-index: 2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  padding: 1rem 1.5rem;
+  background-color: var(--nav-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.nav-menu {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid white;
+}
+
+/* footer */
+
+.aplication-footer {
+  display: flex;
+  margin-top: auto;
+  background-color: var(--nav-color);
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+}
+
+.aplication-footer a {
+  color: var(--footer);
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.aplication-footer p {
+  font-size: 1.2rem;
+}
+
+/* article 1 */
+
+.image-container-home {
+  background-image: url(images/home.jpg);
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+h1 {
+  margin-bottom: -5rem;
+  margin-right: 4rem;
+  flex-basis: 250px;
+}
+
+/* article 2 */
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.wrapper-aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.text-container-aboutus {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.text-aboutus {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.text-aboutus h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* article 3 */
+
+.what-we-do {
+  background-color: var(--nav-color);
+  color: white;
+}
+
+.wrapper-whatwedo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+}
+
+.text-whatwedo {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  max-width: 900px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.text-whatwedo h2 {
+  font-size: 2.5rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-whatwedo {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.image-whatwedo p {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.wrapper-whatwedo img {
+  width: 75px;
+  height: auto;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+/* article 4 */
+
+.our-trips {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  margin: 3rem 0;
+}
+
+.our-trips-grid {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 300px));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.our-trips-grid div {
+  background-color: var(--gray);
+  width: 300px;
+  height: 300px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-trips-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+/* article 5 */
+
+.where-to-go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightbrown);
+  color: white;
+  width: 100%;
+  height: 450px;
+}
+
+.wrapper-wheretogo {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-wheretogo .text-wheretogo {
+  align-items: center;
+}
+
+.wrappwe-wheretogo .h2-wheretogo {
+  align-items: flex-start;
+}
+
+.text-wheretogo p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  text-align: justify;
+}
+
+.text-wheretogo {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.text-wheretogo button {
+  border: 2px solid white;
+  background-color: white;
+  font-weight: bold;
+  padding: 8px;
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h2-wheretogo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  width: 20%;
+}
+
+/* article 6 */
+
+.reviews {
+  height: fit-content;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.reviews h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding-top: 80px;
+}
+
+.review-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.reviews-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.wrapper-reviews {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  max-width: 900px;
+}
+
+.reviews-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.review-name {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  font-weight: bold;
+}
+
+/* article 7 */
+
+.images-gallery {
+  width: 100%;
+  display: flex;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* breakpoints */
+
+@media (max-width: 1400px) {
+  .our-trips-grid {
+    grid-template-columns: repeat(2, minmax(300px, 300px));
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    flex-direction: column;
+    background-color: var(--nav-color);
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+  }
+
+  .nav-menu.active {
+    left: 20%;
+  }
+
+  .nav-item {
+    margin: 1.2rem 0;
+  }
+
+  .nav-link {
+    color: var(--nav-color);
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+  }
+
+  .nav-link:hover {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .about-us {
+    margin: 6rem;
+    height: fit-content;
+  }
+
+  .wrapper-aboutus {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .text-aboutus,
+  .image-container {
+    flex: 0 0 100%;
+  }
+
+  .text-aboutus h2,
+  .text-aboutus p {
+    margin-bottom: 2rem;
+  }
+
+  .text-whatwedo {
+    margin-bottom: 0;
+  }
+
+  .text-container-aboutus {
+    padding: 0;
+  }
+
+  .image-whatwedo {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .wrapper-whatwedo img {
+    margin-bottom: 1rem;
+  }
+
+  .our-trips-grid {
+    grid-template-columns: repeat(1, minmax(300px, 300px));
+  }
+
+  .our-trips-grid div {
+    background-color: var(--gray);
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .wrapper-wheretogo {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .h2-wheretogo {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .text-wheretogo {
+    width: 100%;
+    padding: 0px;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  .images-gallery {
+    flex-direction: column;
+  }
+}
